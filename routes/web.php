@@ -17,10 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// rota de teste
+Route::get('/postagens', function(){
+    return view('postagens.index');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
