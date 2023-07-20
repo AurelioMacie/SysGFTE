@@ -13,7 +13,9 @@ return [
     'user' => [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
+        'admin_permission'             => 'browse_admin',
         'default_avatar'               => 'users/default.png',
+        'namespace'                    => App\User::class,
         'redirect'                     => '/admin',
     ],
 
@@ -78,6 +80,8 @@ return [
     |
     */
 
+    //definicacao de quais tabelas serao ocultas no voyager, é so adicionar a tabela desejada dentro do array
+
     'database' => [
         'tables' => [
             'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'personal_access_tokens', 'settings'],
@@ -99,7 +103,7 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => false,
+        'enabled' => true,
 
         /*
          * Select default language
@@ -111,7 +115,7 @@ return [
          */
         'locales' => [
             'en',
-            //'pt',
+            'pt',
         ],
     ],
 
@@ -124,10 +128,13 @@ return [
     |
     */
 
+    // a parte de baixo eh utilizada para alteracao do menu suspenso, parte de ajustes de logout
+    // basta alterar 'voyager::generic.profile' pelo nome desejado, assim como os outros itens
+
     'dashboard' => [
         // Add custom list items to navbar's dropdown
         'navbar_items' => [
-            'voyager::generic.profile' => [
+            'Meu Perfil' => [
                 'route'      => 'voyager.profile',
                 'classes'    => 'class-full-of-rum',
                 'icon_class' => 'voyager-person',
@@ -137,11 +144,14 @@ return [
                 'icon_class'   => 'voyager-home',
                 'target_blank' => true,
             ],
-            'voyager::generic.logout' => [
+            'Sair' => [
                 'route'      => 'voyager.logout',
                 'icon_class' => 'voyager-power',
             ],
         ],
+
+        // essa eh a parte inicial que mostra posts e usuarios
+        // podem ser adicionados quantos widgets for precisos
 
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
@@ -185,7 +195,9 @@ return [
 
     'primary_color' => '#22A7F0',
 
-    'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
+    // mostra o modo de desenvolvimento, "como usar:" in Menu and Settings
+
+    'show_dev_tips' => true, 
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
