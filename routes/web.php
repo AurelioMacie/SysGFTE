@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 // rota de teste
 Route::get('/postagens', function(){
-    return view('postagens.index');
+    return view('voyager.index');
 });
 
 Route::get('/dashboard', function () {
