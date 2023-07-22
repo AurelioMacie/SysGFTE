@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RotaController;
 
 /*
@@ -37,5 +38,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::prefix('rota')->group(function(){
     Route::get('/', [RotaController::class, 'index'])->name('rota');
 });
+
+// Auth::routes();
 
 // Route::get('/principal',[App\Http\Controllers\Web\HomeController::class,'home']);
