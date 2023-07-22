@@ -21,18 +21,16 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
     <!-- Themify icon-->
     <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
-    <!-- Flag icon-->
+    <!-- Flag icon não muda-->
     <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
     <!-- Feather icon-->
     <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
-    <!-- Plugins css start-->
-    <!-- Plugins css Ends-->
-    <!-- Bootstrap css-->
+    <!-- Bootstrap css muda-->
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-    <!-- App css-->
+    <!-- App css não muda-->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
-    <!-- Responsive css-->
+    <!-- Responsive css não muda-->
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 </head>
 <body>
@@ -52,16 +50,15 @@
                     <form class="theme-form login-form" method="post" action="{{route('login')}}">
                         @csrf
                         <h4><strong>Aceder</strong></h4>
-                        <h6>Por favor prenche corretamente</h6>
+                        <h6>Por favor preencher corretamente</h6>
                         <div class="form-group">
                             <label>Endereço de Email</label>
                             <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
-                                <input class="form-control @error('email') is-invalid @enderror" id="email" name="email" type="email" :value="old('email)" required="" placeholder="Test@gmail.com">
-
+                                <input class="form-control @error('email') is-invalid @enderror" id="email" name="email" type="email" required="" placeholder="Test@gmail.com">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>
-                            </span>
+                                </span>
                                 @enderror
                                 <span class="form-bar"></span>
                             </div>
@@ -69,7 +66,7 @@
                         <div class="form-group">
                             <label>Senha</label>
                             <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
-                                <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" :value="old('password')" required="" placeholder="*********">
+                                <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password"required="" placeholder="*********">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>
@@ -101,7 +98,7 @@
                             </button>
                         </div>
 
-                        <p>Criar conta?<a class="ms-2" href="register">Registar</a></p>
+                        <p>Criar conta<a class="ms-2" href="register">Registar</a></p>
                     </form>
                 </div>
             </div>

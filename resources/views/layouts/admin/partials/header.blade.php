@@ -116,11 +116,22 @@
                 <p class="f-12">1 hr ago</p>
               </div>
             </li>
-            <li class="text-center"> <a class="f-w-700" href="javascript:void(0)">See All     </a></li>
+            <li class="text-center"> <a class="f-w-700" href="javascript:void(0)">See All</a></li>
           </ul>
         </li>
         <li class="onhover-dropdown p-0">
-          <button class="btn btn-primary-light" type="button"><i data-feather="log-out"></i>Sair</button>
+          <button class="btn btn-primary-light" type="button">
+            
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                     <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                                <i data-feather="log-out"></i>
+                                            Sair
+                     </x-responsive-nav-link>
+                </form>
+          </button>
         </li>
       </ul>
     </div>

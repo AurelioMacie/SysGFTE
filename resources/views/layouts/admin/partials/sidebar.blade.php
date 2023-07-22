@@ -2,7 +2,8 @@
     <div class="sidebar-user text-center">
         <a class="setting-primary" href="javascript:void(0)"><i data-feather="settings"></i></a><img class="img-90 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="" />
         <div class="badge-bottom"><span class="badge badge-primary">New</span></div>
-        <a href="user-profile"> <h6 class="mt-3 f-14 f-w-600">Emay Walter</h6></a>
+        <a href="user-profile"> <h5 class="mt-3 f-14 f-w-600">{{ Auth::user()->name }}</h5></a>
+        <a href="user-profile"> <h7 class="mt-3 f-14 f-w-600">{{ Auth::user()->email }}</h7></a>
     </div>
     <nav>
         <div class="main-navbar">
@@ -14,7 +15,7 @@
                     </li>
                     <li class="sidebar-main-title">
                         <div>
-                            <h6>General</h6>
+                            <h6><a href="/dashboard" class="navbar-link">General</a></h6>
                         </div>
                     </li>
 
