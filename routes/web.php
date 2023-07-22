@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::prefix('rota')->group(function(){
+    Route::get('/', [RotaController::class, 'index'])->name('rota');
+});
 
 // Route::get('/principal',[App\Http\Controllers\Web\HomeController::class,'home']);
