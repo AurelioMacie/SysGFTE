@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Motorista extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function veiculos(){
+        return $this->belongsToMany(Veiculo::class, 'veiculo_motoristas');
+    }
 }
