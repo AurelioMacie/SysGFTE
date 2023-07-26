@@ -18,22 +18,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <!-- Font Awesome-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/fontawesome.css">
     <!-- ico-font-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.css">
     <!-- Themify icon-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/themify.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/themify.css">
     <!-- Flag icon não muda-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/flag-icon.css">
     <!-- Feather icon-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/feather-icon.css">
     <!-- Bootstrap css muda-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <!-- App css não muda-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> -->
-    <!-- <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
     <!-- Responsive css não muda-->
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 </head>
 <body>
 <!-- Loader starts-->

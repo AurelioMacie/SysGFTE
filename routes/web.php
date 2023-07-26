@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RotaController;
+use App\Http\Controllers\MultaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,15 @@ use App\Http\Controllers\RotaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::prefix('multa')->group(function(){
+    Route::get('/', [MultaController::class, 'index'])->name('multa');
+    Route::get('/create', [MultaController::class, 'create'])->name('multa-create');
+    Route::post('/', [MultaController::class, 'store'])->name('multa-store');
+    Route::get('/{id}/edit', [MultaController::class, 'edit'])->name('multa-edit');
+    Route::put('/{id}', [MultaController::class, 'update'])->name('multa-update');
+    Route::delete('/{id}', [MultaController::class, 'destroy'])->name('multa-destroy');
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,6 +44,7 @@ require __DIR__.'/auth.php';
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 
 Route::prefix('rota')->group(function(){
     Route::get('/', [RotaController::class, 'index'])->name('rota');
